@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - PageIndex</title>
+</head>
+<body>
+    <header>
+        <h1>PageIndex API Documentation</h1>
+        <p>A vectorless RAG solution for document indexing and retrieval</p>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>PageIndex is a revolutionary approach to document retrieval that uses hierarchical tree structures and LLM reasoning instead of traditional vector embeddings. This approach offers several advantages:</p>
+            <ul>
+                <li>No vector database required</li>
+                <li>Interpretable search process</li>
+                <li>Better handling of document structure</li>
+                <li>Reduced storage requirements</li>
+            </ul>
+        </section>
+
+        <section id="installation">
+            <h2>Installation</h2>
+            <h3>Using npm</h3>
+            <pre><code>npm install pageindex-ts</code></pre>
+            
+            <h3>Using yarn</h3>
+            <pre><code>yarn add pageindex-ts</code></pre>
+        </section>
+
+        <section id="quick-start">
+            <h2>Quick Start</h2>
+            <p>Get started with PageIndex in just a few lines of code:</p>
+            <pre><code>
+import { PageIndex } from 'pageindex-ts';
+
+const pageIndex = new PageIndex({
+    openaiApiKey: process.env.OPENAI_API_KEY
+});
+
+// Index a document
+const doc = await pageIndex.indexFromFile('document.pdf');
+
+// Search the document
+const results = await pageIndex.query('What is the main topic?');
+            </code></pre>
+        </section>
+
+        <section id="api-reference">
+            <h2>API Reference</h2>
+            
+            <article id="pageindex-class">
+                <h3>PageIndex Class</h3>
+                <p>The main class for document indexing and querying.</p>
+                
+                <h4>Constructor</h4>
+                <pre><code>new PageIndex(config: PageIndexConfig)</code></pre>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>openaiApiKey</td>
+                            <td>string</td>
+                            <td>Your OpenAI API key</td>
+                        </tr>
+                        <tr>
+                            <td>openaiModel</td>
+                            <td>string</td>
+                            <td>Model to use (default: gpt-4o-mini)</td>
+                        </tr>
+                        <tr>
+                            <td>dataDir</td>
+                            <td>string</td>
+                            <td>Directory for storing indexes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article id="indexing-methods">
+                <h3>Indexing Methods</h3>
+                
+                <h4>indexFromFile(filePath, options)</h4>
+                <p>Index a document from a local file path.</p>
+                <pre><code>
+const doc = await pageIndex.indexFromFile('/path/to/document.pdf', {
+    name: 'my-document',
+    useLLMTreeBuilder: true
+});
+                </code></pre>
+
+                <h4>indexFromUrl(url, options)</h4>
+                <p>Index a document from a URL.</p>
+                <pre><code>
+const doc = await pageIndex.indexFromUrl('https://example.com/doc.pdf');
+                </code></pre>
+
+                <h4>indexContent(content, name, contentType)</h4>
+                <p>Index content directly.</p>
+                <pre><code>
+const doc = await pageIndex.indexContent(buffer, 'doc-name', 'text/markdown');
+                </code></pre>
+            </article>
+
+            <article id="search-methods">
+                <h3>Search Methods</h3>
+                
+                <h4>query(query, documentIds, options)</h4>
+                <p>Search indexed documents using LLM reasoning.</p>
+                <pre><code>
+const results = await pageIndex.query(
+    'What are the key features?',
+    ['doc-id-1', 'doc-id-2'],
+    { topK: 5, includeReasoning: true }
+);
+                </code></pre>
+
+                <h5>SearchOptions</h5>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>topK</td>
+                            <td>number</td>
+                            <td>3</td>
+                            <td>Number of results to return</td>
+                        </tr>
+                        <tr>
+                            <td>maxIterations</td>
+                            <td>number</td>
+                            <td>5</td>
+                            <td>Max tree traversal iterations</td>
+                        </tr>
+                        <tr>
+                            <td>includeReasoning</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Include LLM reasoning in results</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <section id="supported-formats">
+            <h2>Supported Document Formats</h2>
+            <ul>
+                <li><strong>PDF</strong> - Portable Document Format (.pdf)</li>
+                <li><strong>HTML</strong> - HyperText Markup Language (.html, .htm)</li>
+                <li><strong>Markdown</strong> - Markdown files (.md)</li>
+                <li><strong>Plain Text</strong> - Text files (.txt)</li>
+            </ul>
+        </section>
+
+        <section id="architecture">
+            <h2>Architecture</h2>
+            <p>PageIndex uses a three-stage process:</p>
+            <ol>
+                <li><strong>Parsing</strong> - Documents are parsed into structured sections</li>
+                <li><strong>Tree Building</strong> - Sections are organized into a hierarchical tree</li>
+                <li><strong>LLM Search</strong> - Queries are answered by traversing the tree with LLM reasoning</li>
+            </ol>
+            
+            <h3>Tree Structure</h3>
+            <p>Each node in the tree contains:</p>
+            <ul>
+                <li><code>node_id</code> - Unique identifier</li>
+                <li><code>title</code> - Section title</li>
+                <li><code>summary</code> - Content summary</li>
+                <li><code>start_index</code> - Starting page/position</li>
+                <li><code>end_index</code> - Ending page/position</li>
+                <li><code>nodes</code> - Child nodes</li>
+            </ul>
+        </section>
+
+        <section id="examples">
+            <h2>Examples</h2>
+            
+            <h3>Index Multiple Documents</h3>
+            <pre><code>
+const docs = ['doc1.pdf', 'doc2.md', 'doc3.html'];
+for (const doc of docs) {
+    await pageIndex.indexFromFile(doc);
+}
+            </code></pre>
+
+            <h3>Search with Specific Documents</h3>
+            <pre><code>
+const results = await pageIndex.query(
+    'company revenue',
+    ['financial-report', 'quarterly-earnings']
+);
+            </code></pre>
+
+            <h3>Get Document List</h3>
+            <pre><code>
+const documents = await pageIndex.listDocuments();
+console.log(documents);
+            </code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PageIndex. MIT License.</p>
+        <nav>
+            <a href="https://github.com/example/pageindex">GitHub</a>
+            <a href="https://npmjs.com/package/pageindex-ts">npm</a>
+        </nav>
+    </footer>
+</body>
+</html>

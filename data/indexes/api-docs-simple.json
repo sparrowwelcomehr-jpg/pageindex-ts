@@ -1,0 +1,198 @@
+{
+  "doc_name": "api-docs-simple",
+  "structure": [
+    {
+      "node_id": "0000",
+      "title": "Introduction",
+      "summary": "PageIndex is a revolutionary approach to document retrieval that uses hierarchical tree structures and LLM reasoning instead of traditional vector embeddings. This approach offers several advantages: No vector database required Interpretable search process Better handling of document structure Reduced storage requirements",
+      "start_index": 1,
+      "end_index": 1,
+      "nodes": []
+    },
+    {
+      "node_id": "0003",
+      "title": "Installation",
+      "summary": "eIndex in just a few line",
+      "start_index": 2,
+      "end_index": 4,
+      "nodes": [
+        {
+          "node_id": "0001",
+          "title": "Using npm",
+          "summary": "npm install pageindex-ts",
+          "start_index": 3,
+          "end_index": 3,
+          "nodes": []
+        },
+        {
+          "node_id": "0002",
+          "title": "Using yarn",
+          "summary": "yarn add pageindex-ts",
+          "start_index": 4,
+          "end_index": 4,
+          "nodes": []
+        }
+      ]
+    },
+    {
+      "node_id": "0004",
+      "title": "Quick Start",
+      "summary": "Get started with PageIndex in just a few lines of code: import { PageIndex } from 'pageindex-ts'; const pageIndex = new PageIndex({ openaiApiKey: process.env.OPENAIAPIKEY }); // Index a document const doc = await pageIndex.indexFromFile('document.pdf'); // Search the document const results = await pageIndex.query('What is the main topic?');",
+      "start_index": 5,
+      "end_index": 5,
+      "nodes": []
+    },
+    {
+      "node_id": "0014",
+      "title": "API Reference",
+      "summary": "PageIndex Class The main class for document indexing and querying. Constructor new PageIndex(config: PageIndexConfig) Parameter Type Description openaiApiKey string Your OpenAI API key openaiModel string Model to use (default: gpt-4o-mini) dataDir string Directory for storing indexes Indexing Methods indexFromFile(filePath, options) Index a document from a local file path.",
+      "start_index": 6,
+      "end_index": 15,
+      "nodes": [
+        {
+          "node_id": "0006",
+          "title": "PageIndex Class",
+          "summary": "The main class for document indexing and querying.",
+          "start_index": 7,
+          "end_index": 8,
+          "nodes": [
+            {
+              "node_id": "0005",
+              "title": "Constructor",
+              "summary": "new PageIndex(config: PageIndexConfig) Parameter Type Description openaiApiKey string Your OpenAI API key openaiModel string Model to use (default: gpt-4o-mini) dataDir string Directory for storing indexes",
+              "start_index": 8,
+              "end_index": 8,
+              "nodes": []
+            }
+          ]
+        },
+        {
+          "node_id": "0010",
+          "title": "Indexing Methods",
+          "summary": "ch - Queries are answered by traversing the tree w",
+          "start_index": 9,
+          "end_index": 12,
+          "nodes": [
+            {
+              "node_id": "0007",
+              "title": "indexFromFile(filePath, options)",
+              "summary": "Index a document from a local file path. const doc = await pageIndex.indexFromFile('/path/to/document.pdf', { name: 'my-document', useLLMTreeBuilder: true });",
+              "start_index": 10,
+              "end_index": 10,
+              "nodes": []
+            },
+            {
+              "node_id": "0008",
+              "title": "indexFromUrl(url, options)",
+              "summary": "Index a document from a URL. const doc = await pageIndex.indexFromUrl('https://example.com/doc.pdf');",
+              "start_index": 11,
+              "end_index": 11,
+              "nodes": []
+            },
+            {
+              "node_id": "0009",
+              "title": "indexContent(content, name, contentType)",
+              "summary": "Index content directly. const doc = await pageIndex.indexContent(buffer, 'doc-name', 'text/markdown');",
+              "start_index": 12,
+              "end_index": 12,
+              "nodes": []
+            }
+          ]
+        },
+        {
+          "node_id": "0013",
+          "title": "Search Methods",
+          "summary": "ment List  const documents = await pageIndex",
+          "start_index": 13,
+          "end_index": 15,
+          "nodes": [
+            {
+              "node_id": "0012",
+              "title": "query(query, documentIds, options)",
+              "summary": "Search indexed documents using LLM reasoning. const results = await pageIndex.query( 'What are the key features?', ['doc-id-1', 'doc-id-2'], { topK: 5, includeReasoning: true } );",
+              "start_index": 14,
+              "end_index": 15,
+              "nodes": [
+                {
+                  "node_id": "0011",
+                  "title": "SearchOptions",
+                  "summary": "Option Type Default Description topK number 3 Number of results to return maxIterations number 5 Max tree traversal iterations includeReasoning boolean true Include LLM reasoning in results",
+                  "start_index": 15,
+                  "end_index": 15,
+                  "nodes": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "node_id": "0015",
+      "title": "Supported Document Formats",
+      "summary": "PDF - Portable Document Format (.pdf) HTML - HyperText Markup Language (.html, .htm) Markdown - Markdown files (.md) Plain Text - Text files (.txt)",
+      "start_index": 16,
+      "end_index": 16,
+      "nodes": []
+    },
+    {
+      "node_id": "0017",
+      "title": "Architecture",
+      "summary": "PageIndex uses a three-stage process: Parsing - Documents are parsed into structured sections Tree Building - Sections are organized into a hierarchical tree LLM Search - Queries are answered by traversing the tree with LLM reasoning",
+      "start_index": 17,
+      "end_index": 18,
+      "nodes": [
+        {
+          "node_id": "0016",
+          "title": "Tree Structure",
+          "summary": "Each node in the tree contains: nodeid - Unique identifier title - Section title summary - Content summary startindex - Starting page/position endindex - Ending page/position nodes - Child nodes",
+          "start_index": 18,
+          "end_index": 18,
+          "nodes": []
+        }
+      ]
+    },
+    {
+      "node_id": "0021",
+      "title": "Examples",
+      "summary": "",
+      "start_index": 19,
+      "end_index": 22,
+      "nodes": [
+        {
+          "node_id": "0018",
+          "title": "Index Multiple Documents",
+          "summary": "const docs = ['doc1.pdf', 'doc2.md', 'doc3.html']; for (const doc of docs) { await pageIndex.indexFromFile(doc); }",
+          "start_index": 20,
+          "end_index": 20,
+          "nodes": []
+        },
+        {
+          "node_id": "0019",
+          "title": "Search with Specific Documents",
+          "summary": "const results = await pageIndex.query( 'company revenue', ['financial-report', 'quarterly-earnings'] );",
+          "start_index": 21,
+          "end_index": 21,
+          "nodes": []
+        },
+        {
+          "node_id": "0020",
+          "title": "Get Document List",
+          "summary": "const documents = await pageIndex.listDocuments(); console.log(documents);",
+          "start_index": 22,
+          "end_index": 22,
+          "nodes": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "title": "API Documentation - PageIndex",
+    "wordCount": 415,
+    "sourceUrl": "/Users/pi/Documents/personal/page index vectorless/pageindex-ts/samples/api-docs.html",
+    "documentType": "html"
+  },
+  "id": "api-docs-simple",
+  "createdAt": "2026-03-01T14:53:26.503Z",
+  "updatedAt": "2026-03-01T14:53:26.503Z"
+}

@@ -1,0 +1,23 @@
+{
+  "doc_name": "somatosensory-simple",
+  "structure": [
+    {
+      "node_id": "0000",
+      "title": "F R OM  W IKIBOOKS",
+      "summary": "1 Our somatosensor y system c onsists of sensors in the skin and sensors in our muscles, tendons, and joints. The re- ceptors in the skin, the so called cutaneous rec eptors, tell us about temperature ( thermorec eptors ), pressure and sur- face te xture ( mechano rec eptors ), and pain ( nociceptors ). The rec eptors in muscles and joints pro vide inf ormation about muscle length, muscle tension, and joint angles.",
+      "start_index": 9,
+      "end_index": 9,
+      "nodes": []
+    }
+  ],
+  "metadata": {
+    "title": "Anatomy of the Somatosensory System",
+    "pageCount": 4,
+    "wordCount": 1356,
+    "sourceUrl": "/Users/pi/Documents/personal/page index vectorless/pageindex-ts/samples/somatosensory.pdf",
+    "documentType": "pdf"
+  },
+  "id": "somatosensory-simple",
+  "createdAt": "2026-03-01T14:53:52.651Z",
+  "updatedAt": "2026-03-01T14:53:52.651Z"
+}

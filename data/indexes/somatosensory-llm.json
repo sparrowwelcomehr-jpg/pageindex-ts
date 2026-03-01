@@ -1,0 +1,56 @@
+{
+  "doc_name": "somatosensory-llm",
+  "structure": [
+    {
+      "node_id": "0000",
+      "title": "Anatomy of the Somatosensory System",
+      "summary": "The somatosensory system comprises receptors in the skin and in muscles, tendons, and joints, which provide information about temperature, pressure, texture, pain, muscle length, tension, and joint angles. Cutaneous receptors, such as Meissner's and Merkel's receptors, play key roles in detecting touch, texture, and form, while nociceptors respond to pain. The system's rapid and slow adapting receptors allow for immediate and sustained responses to stimuli, facilitating motor activity and sensory perception.",
+      "start_index": 1,
+      "end_index": 4,
+      "nodes": [
+        {
+          "node_id": "0001",
+          "title": "Cutaneous receptors",
+          "summary": "Cutaneous receptors are sensory receptors located in the skin that provide information about temperature (thermoreceptors), pressure and texture (mechanoreceptors), and pain (nociceptors). Meissner corpuscles, a type of mechanoreceptor, play a crucial role in adjusting grip force when lifting objects by responding quickly to small movements. These receptors can be categorized into free nerve endings and encapsulated types, such as Pacinian corpuscles and Merkel's disks, each serving distinct sensory functions.",
+          "start_index": 1,
+          "end_index": 1,
+          "nodes": []
+        },
+        {
+          "node_id": "0002",
+          "title": "Nociceptors",
+          "summary": "Nociceptors are free nerve endings in the skin that serve as pain receptors. They can be classified into high-threshold mechanoreceptors, which respond to intense mechanical stimuli, and polymodal receptors, which respond to multiple types of damaging stimuli, including thermal and chemical. These receptors play a crucial role in the sensation of pain and protective reflexes.",
+          "start_index": 2,
+          "end_index": 2,
+          "nodes": []
+        },
+        {
+          "node_id": "0003",
+          "title": "Muscle Spindles",
+          "summary": "Muscle spindles are specialized stretch receptors found throughout striated muscles, consisting of intrafusal fibers encased in a capsule. These fibers are connected to extrafusal fibers, allowing them to stretch in response to muscle elongation. They play a crucial role in sensing muscle stretch and contributing to proprioception.",
+          "start_index": 3,
+          "end_index": 3,
+          "nodes": []
+        },
+        {
+          "node_id": "0004",
+          "title": "Joint receptors",
+          "summary": "Joint receptors are low-threshold mechanoreceptors categorized into four groups, each signaling various aspects of joint function, including position, movement, direction, and speed. Additionally, type 4 joint receptors are classified as nociceptors, which respond to pain stimuli. These receptors play a crucial role in proprioception and the control of limb movements.",
+          "start_index": 4,
+          "end_index": 4,
+          "nodes": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "title": "Anatomy of the Somatosensory System",
+    "pageCount": 4,
+    "wordCount": 1356,
+    "sourceUrl": "/Users/pi/Documents/personal/page index vectorless/pageindex-ts/samples/somatosensory.pdf",
+    "documentType": "pdf"
+  },
+  "id": "somatosensory-llm",
+  "createdAt": "2026-03-01T14:54:00.599Z",
+  "updatedAt": "2026-03-01T14:54:00.599Z"
+}

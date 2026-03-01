@@ -1,0 +1,198 @@
+{
+  "doc_name": "api-docs-llm",
+  "structure": [
+    {
+      "node_id": "0000",
+      "title": "Introduction",
+      "summary": "The \"Introduction\" section outlines the purpose and significance of the study, emphasizing the need to address specific gaps in existing research. It highlights the objectives and the potential impact of the findings on the relevant field. The introduction sets the stage for the subsequent analysis and discussion presented in the document.",
+      "start_index": 1,
+      "end_index": 0,
+      "nodes": []
+    },
+    {
+      "node_id": "0001",
+      "title": "Installation",
+      "summary": "The \"Installation\" section outlines the necessary steps for setting up the software, including system requirements, downloading the installation package, and executing the installation process. It emphasizes ensuring compatibility with the operating system and provides troubleshooting tips for common issues that may arise during installation. Additionally, it highlights the importance of following the provided instructions carefully for a successful setup.",
+      "start_index": 1,
+      "end_index": 0,
+      "nodes": [
+        {
+          "node_id": "0002",
+          "title": "Using npm",
+          "summary": "The \"Using npm\" section outlines the basics of the Node Package Manager (npm), which is essential for managing JavaScript packages in Node.js applications. It covers how to install npm, manage dependencies, and utilize scripts for automating tasks. Key commands include `npm install` for adding packages and `npm run` for executing scripts defined in the package.json file.",
+          "start_index": 1,
+          "end_index": 0,
+          "nodes": []
+        },
+        {
+          "node_id": "0003",
+          "title": "Using yarn",
+          "summary": "The \"Using yarn\" section explains how to manage JavaScript packages with Yarn, a package manager that simplifies dependency management. It highlights key commands for installing, updating, and removing packages, as well as how to create and manage a project’s configuration file. Additionally, it emphasizes the benefits of Yarn, such as faster installation times and improved package resolution.",
+          "start_index": 1,
+          "end_index": 0,
+          "nodes": []
+        }
+      ]
+    },
+    {
+      "node_id": "0004",
+      "title": "Quick Start",
+      "summary": "The \"Quick Start\" section offers a streamlined guide for users to quickly set up and begin using the product. It outlines essential steps, including installation, initial configuration, and basic usage tips to help users get started efficiently. The section emphasizes the importance of following these steps to ensure optimal performance and user experience.",
+      "start_index": 1,
+      "end_index": 0,
+      "nodes": []
+    },
+    {
+      "node_id": "0005",
+      "title": "API Reference",
+      "summary": "The \"API Reference\" section outlines the key functionalities of the PageIndex class for document indexing and querying. It details the constructor and methods for indexing documents from a local file, a URL, or directly from content, allowing users to easily manage document retrieval without the need for a vector database. The provided code snippets demonstrate how to implement these methods effectively.",
+      "start_index": 1,
+      "end_index": 1,
+      "nodes": [
+        {
+          "node_id": "0006",
+          "title": "PageIndex Class",
+          "summary": "The \"PageIndex Class\" section describes a class designed to manage and navigate through pages of data efficiently. It includes methods for adding, removing, and retrieving pages, as well as functionalities for indexing and searching within the pages. The class aims to enhance data organization and accessibility in applications that handle large datasets.",
+          "start_index": 1,
+          "end_index": 0,
+          "nodes": [
+            {
+              "node_id": "0007",
+              "title": "Constructor",
+              "summary": "The \"Constructor\" section outlines the purpose and functionality of a constructor in programming, which is a special method used to initialize objects when they are created. It typically sets initial values for object attributes and can accept parameters to customize the object's state. Constructors play a crucial role in ensuring that objects are properly set up before they are used in a program.",
+              "start_index": 1,
+              "end_index": 0,
+              "nodes": []
+            }
+          ]
+        },
+        {
+          "node_id": "0008",
+          "title": "Indexing Methods",
+          "summary": "The \"Indexing Methods\" section discusses various techniques used to organize and retrieve data efficiently. It highlights the importance of indexing in improving search performance and reducing access time, with common methods including B-trees, hash indexing, and inverted indexes. Each method has its advantages and is suited for different types of data and query requirements.",
+          "start_index": 1,
+          "end_index": 0,
+          "nodes": [
+            {
+              "node_id": "0009",
+              "title": "indexFromFile(filePath, options)",
+              "summary": "The function \"indexFromFile(filePath, options)\" is designed to create an index from a specified file located at the given file path. It accepts parameters that allow customization of the indexing process through various options. This function is essential for efficiently organizing and retrieving data from the file.",
+              "start_index": 1,
+              "end_index": 0,
+              "nodes": []
+            },
+            {
+              "node_id": "0010",
+              "title": "indexFromUrl(url, options)",
+              "summary": "The \"indexFromUrl(url, options)\" function is designed to create an index from a specified URL, utilizing optional parameters to customize its behavior. It processes the content retrieved from the URL and allows for additional configurations through the options provided. This function is essential for efficiently managing and organizing data sourced from web links.",
+              "start_index": 1,
+              "end_index": 0,
+              "nodes": []
+            },
+            {
+              "node_id": "0011",
+              "title": "indexContent(content, name, contentType)",
+              "summary": "The function \"indexContent(content, name, contentType)\" is designed to organize and categorize content by associating it with a specific name and type. This indexing process enhances the retrieval and management of content within a system, ensuring that users can efficiently access the information they need based on its classification.",
+              "start_index": 1,
+              "end_index": 0,
+              "nodes": []
+            }
+          ]
+        },
+        {
+          "node_id": "0012",
+          "title": "Search Methods",
+          "summary": "The \"Search Methods\" section introduces PageIndex, a document retrieval system that utilizes hierarchical tree structures and LLM reasoning, eliminating the need for vector databases and improving document structure handling. Users can easily install PageIndex via npm or yarn and start indexing documents from files or URLs with simple code snippets. The API provides methods for indexing documents and querying their content efficiently.",
+          "start_index": 1,
+          "end_index": 1,
+          "nodes": [
+            {
+              "node_id": "0013",
+              "title": "query(query, documentIds, options)",
+              "summary": "The `query(query, documentIds, options)` method in the PageIndex class allows users to search indexed documents using a specified query and document identifiers. This method leverages the hierarchical tree structure and LLM reasoning for efficient document retrieval without the need for a vector database. It enhances the interpretability of the search process and improves the handling of document structures.",
+              "start_index": 1,
+              "end_index": 1,
+              "nodes": [
+                {
+                  "node_id": "0014",
+                  "title": "SearchOptions",
+                  "summary": "The \"SearchOptions\" section introduces PageIndex, a novel document retrieval system that utilizes hierarchical tree structures and LLM reasoning, eliminating the need for vector databases and enhancing the interpretability and efficiency of document searches. It outlines installation instructions via npm and yarn, and provides a quick start guide for indexing and querying documents. The API reference details the main class and methods for indexing documents from files, URLs, or directly from content.",
+                  "start_index": 1,
+                  "end_index": 1,
+                  "nodes": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "node_id": "0015",
+      "title": "Supported Document Formats",
+      "summary": "The \"Supported Document Formats\" section outlines the various file types that the system can process, including common formats such as PDF, DOCX, and TXT. It emphasizes compatibility with both text-based and image-based documents, ensuring users can upload a wide range of materials for processing. Additionally, the section may mention any limitations or specific requirements for certain formats.",
+      "start_index": 2,
+      "end_index": 1,
+      "nodes": []
+    },
+    {
+      "node_id": "0016",
+      "title": "Architecture",
+      "summary": "The \"Architecture\" section outlines the structural design and framework of a system or building, emphasizing its functional and aesthetic aspects. It highlights the importance of integrating various components to ensure efficiency, sustainability, and adaptability. Key architectural principles discussed include balance, proportion, and harmony, which contribute to the overall effectiveness of the design.",
+      "start_index": 2,
+      "end_index": 1,
+      "nodes": [
+        {
+          "node_id": "0017",
+          "title": "Tree Structure",
+          "summary": "The \"Tree Structure\" section outlines the hierarchical organization of data in a tree format, where each element is called a node. It emphasizes the relationships between nodes, including parent-child connections, and highlights the benefits of this structure for efficient data management and retrieval. Additionally, it discusses various types of trees, such as binary trees and balanced trees, which optimize performance for specific applications.",
+          "start_index": 2,
+          "end_index": 1,
+          "nodes": []
+        }
+      ]
+    },
+    {
+      "node_id": "0018",
+      "title": "Examples",
+      "summary": "The \"Examples\" section illustrates how to use the PageIndex system for document indexing and searching. It includes code snippets for indexing multiple documents in various formats, querying specific documents for information, and retrieving a list of indexed documents. Key functionalities demonstrated are document indexing, targeted searches, and document management.",
+      "start_index": 2,
+      "end_index": 2,
+      "nodes": [
+        {
+          "node_id": "0019",
+          "title": "Index Multiple Documents",
+          "summary": "The \"Index Multiple Documents\" section outlines the process of organizing and categorizing various documents for efficient retrieval and management. It emphasizes the importance of creating a structured index that allows users to quickly locate specific information across multiple files. Key techniques include using metadata, tags, and a consistent naming convention to enhance searchability and accessibility.",
+          "start_index": 2,
+          "end_index": 1,
+          "nodes": []
+        },
+        {
+          "node_id": "0020",
+          "title": "Search with Specific Documents",
+          "summary": "The section \"Search with Specific Documents\" outlines how users can enhance their search results by specifying particular documents to reference during the search process. This feature allows for more targeted and relevant outcomes, improving the efficiency of information retrieval. Users can select documents that contain essential context or data to refine their search queries effectively.",
+          "start_index": 2,
+          "end_index": 1,
+          "nodes": []
+        },
+        {
+          "node_id": "0021",
+          "title": "Get Document List",
+          "summary": "The \"Get Document List\" section describes how to retrieve a list of indexed documents using the `listDocuments` method from the PageIndex. By executing this method, users can obtain and display the documents available in the index. This functionality is part of the overall architecture that supports searching and organizing various document formats.",
+          "start_index": 2,
+          "end_index": 2,
+          "nodes": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "title": "API Documentation - PageIndex",
+    "wordCount": 415,
+    "sourceUrl": "/Users/pi/Documents/personal/page index vectorless/pageindex-ts/samples/api-docs.html",
+    "documentType": "html"
+  },
+  "id": "api-docs-llm",
+  "createdAt": "2026-03-01T14:53:52.591Z",
+  "updatedAt": "2026-03-01T14:53:52.591Z"
+}
