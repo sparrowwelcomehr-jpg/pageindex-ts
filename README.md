@@ -41,21 +41,31 @@ src/
 │   ├── DocumentController.ts
 │   ├── routes.ts
 │   └── middleware.ts
-└── index.ts         # Server entry point
+├── index.ts         # Package exports (createServer, PageIndex)
+└── cli.ts           # HTTP server CLI (`npx pageindex-ts`)
 ```
 
 ## Installation
 
+### From npm
+
 ```bash
-# Clone and enter directory
+npm install pageindex-ts
+```
+
+Set `OPENAI_API_KEY` (and optionally `PORT`, `DATA_DIR`, `OPENAI_MODEL`) in your environment, then start the server:
+
+```bash
+npx pageindex-ts
+```
+
+### From source (development)
+
+```bash
+git clone https://github.com/sparrowwelcomehr-jpg/pageindex-ts.git
 cd pageindex-ts
-
-# Install dependencies
 npm install
-
-# Copy environment file
 cp .env.example .env
-
 # Edit .env and add your OpenAI API key
 ```
 
@@ -149,7 +159,7 @@ curl -X DELETE http://localhost:3000/api/documents/my-doc
 ## Programmatic Usage
 
 ```typescript
-import { PageIndex } from './core';
+import { PageIndex } from 'pageindex-ts';
 
 const pageIndex = new PageIndex({
   openaiApiKey: process.env.OPENAI_API_KEY!,
