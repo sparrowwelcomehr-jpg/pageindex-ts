@@ -130,7 +130,7 @@ Inspect the tarball or install it into another folder:
 
 ```bash
 cd /path/to/another-project
-npm install /path/to/pageindex-ts/pageindex-vectorless-1.0.0.tgz
+npm install /path/to/pageindex-ts/pageindex-vectorless-1.0.1.tgz
 ```
 
 Or link the package:
