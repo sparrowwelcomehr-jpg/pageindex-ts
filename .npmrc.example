@@ -1,0 +1,4 @@
+# Copy to ".npmrc" locally (not committed). Export NPM_TOKEN before npm publish:
+#   export NPM_TOKEN=npm_xxxxx
+
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
