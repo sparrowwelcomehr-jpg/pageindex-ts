@@ -1,6 +1,6 @@
 {
   "name": "pageindex-vectorless",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PageIndex - Vectorless RAG using LLM-based tree search",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
