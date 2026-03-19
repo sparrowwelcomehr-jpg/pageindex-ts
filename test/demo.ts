@@ -8,9 +8,9 @@
  * 
  * INSTALLATION:
  * -------------
- *   npm install pageindex-ts
+ *   npm install pageindex-vectorless
  *   # or
- *   yarn add pageindex-ts
+ *   yarn add pageindex-vectorless
  * 
  * ENVIRONMENT SETUP:
  * ------------------

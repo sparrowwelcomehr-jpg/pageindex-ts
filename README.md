@@ -42,21 +42,23 @@ src/
 │   ├── routes.ts
 │   └── middleware.ts
 ├── index.ts         # Package exports (createServer, PageIndex)
-└── cli.ts           # HTTP server CLI (`npx pageindex-ts`)
+└── cli.ts           # HTTP server CLI (`npx pageindex-vectorless`)
 ```
 
 ## Installation
 
 ### From npm
 
+The npm package is **`pageindex-vectorless`** (the name `pageindex-ts` is already used on the registry by another project). The GitHub repo remains `pageindex-ts`.
+
 ```bash
-npm install pageindex-ts
+npm install pageindex-vectorless
 ```
 
 Set `OPENAI_API_KEY` (and optionally `PORT`, `DATA_DIR`, `OPENAI_MODEL`) in your environment, then start the server:
 
 ```bash
-npx pageindex-ts
+npx pageindex-vectorless
 ```
 
 ### From source (development)
@@ -159,7 +161,7 @@ curl -X DELETE http://localhost:3000/api/documents/my-doc
 ## Programmatic Usage
 
 ```typescript
-import { PageIndex } from 'pageindex-ts';
+import { PageIndex } from 'pageindex-vectorless';
 
 const pageIndex = new PageIndex({
   openaiApiKey: process.env.OPENAI_API_KEY!,

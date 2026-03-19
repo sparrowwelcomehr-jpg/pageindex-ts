@@ -1,5 +1,5 @@
 {
-  "name": "pageindex-ts",
+  "name": "pageindex-vectorless",
   "version": "1.0.0",
   "description": "PageIndex - Vectorless RAG using LLM-based tree search",
   "main": "./dist/index.js",
@@ -11,7 +11,7 @@
     }
   },
   "bin": {
-    "pageindex-ts": "dist/cli.js"
+    "pageindex-vectorless": "dist/cli.js"
   },
   "files": [
     "dist",
